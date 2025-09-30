@@ -199,8 +199,6 @@
 //     printf("LCM of %d and %d is %d\n", a, b, lcm);
 // }
 
-
-
 // Sum of first n natural numbers.
 
 // #include <stdio.h>
@@ -215,12 +213,9 @@
 //     {
 //         sum += i;
 //     }
-    
+
 //     printf("Sum of first %d natural numbers is: %d\n", naturalNum, sum);
 // }
-
-
-
 
 // Sum of square first n natural numbers.
 
@@ -238,10 +233,9 @@
 //         sqr = pow(i, 2);
 //         sum += sqr;
 //     }
-    
+
 //     printf("Sum of first %d natural numbers is: %d\n", naturalNum, sum);
 // }
-
 
 // Sum of square first n natural numbers.
 
@@ -259,8 +253,23 @@
 //         sqr = pow(i, 3);
 //         sum += sqr;
 //     }
-    
+
 //     printf("Sum of first %d natural numbers is: %d\n", naturalNum, sum);
 // }
 
 
+
+
+#include <stdio.h>
+
+int main()
+{
+    int x, y, output;
+
+    x = 8;
+    y = 3;
+
+    output = (x * x) + (2 * x * y) + (y * y);
+
+    printf("Output = %d\n", output);
+}
