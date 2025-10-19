@@ -371,6 +371,219 @@ int main()
 }
 */
 
+/*
+Write a C program using switch case to display the grade of a student based on marks.
 
+    •	90–100 → A+
+    •	80–89 → A
+    •	70–79 → B+
+    •	60–69 → B
+    •	50–59 → C
+    •	33–49 → D
+    •	Below 33 → Fail
+*/
 
+/*
+#include <stdio.h>
 
+int main()
+{
+    int hindi, math, english, science, computer, total;
+    int percentage, gradeRange;
+
+    printf("Enter your subject numbers: \n");
+    scanf("%d %d %d %d %d", &hindi, &math, &english, &science, &computer);
+
+    total = hindi + math + english + science + computer;
+    percentage = total / 5;
+
+    printf("Your total is %d and your percentage is %d\n", total, percentage);
+
+    gradeRange = percentage / 10;
+
+    switch (gradeRange)
+    {
+    case 10:
+    case 9:
+        printf("Congratulations 😍 Your grade is A+.\n");
+        break;
+    case 8:
+        printf("Your grade is A.\n");
+        break;
+    case 7:
+        printf("Your grade is B.\n");
+        break;
+    case 6:
+        printf("Your grade is C.\n");
+        break;
+    case 5:
+        printf("Your grade is D.\n");
+        break;
+    default:
+        printf("Your grade is F. 😢\n");
+        break;
+    }
+
+    return 0;
+}*/
+
+/*
+    Write a C program using switch case to perform unit conversion based on user choice.
+    Kilometer to Meter
+    Meter to Kilometer
+    Celsius to Fahrenheit
+    Fahrenheit to Celsius
+    Hours to Minutes
+*/
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int userChoise;
+    float c, f, km, m, h, output, min, hr;
+
+    printf("1 for km to m. \n");
+    printf("2 for m to km. \n");
+    printf("3 for c to f. \n");
+    printf("4 for f to c. \n");
+    printf("5 for hr to min. \n");
+
+    printf("What's your choise? \n");
+    scanf("%d", &userChoise);
+
+    switch (userChoise)
+    {
+    case 1:
+        printf("Your choise is km to m. \n");
+
+        printf("Enter value of km \n");
+        scanf("%f", &km);
+
+        output = km * 1000;
+        printf("Result = %2.fmeter.", output);
+
+        break;
+    case 2:
+        printf("Your choise is m to km. \n");
+
+        printf("Enter value of m \n");
+        scanf("%f", &m);
+
+        output = m / 100;
+        printf("Result = %2.fkilometer.", output);
+
+        break;
+    case 3:
+        printf("Your choise is c to f. \n");
+
+        printf("Enter value of c \n");
+        scanf("%f", &c);
+
+        output = (c * 9 / 5) + 32;
+        printf("Result = %2.ff.", output);
+
+        break;
+    case 4:
+        printf("Your choise is f to c. \n");
+
+        printf("Enter value of f \n");
+        scanf("%f", &c);
+
+        output = (f - 32) * 5 / 9;
+        printf("Result = %2.fc.", output);
+
+        break;
+    case 5:
+        printf("Your choise is hr to min. \n");
+
+        printf("Enter value of hr \n");
+        scanf("%f", &hr);
+
+        output = hr * 60;
+        printf("Result = %2.fmin.", output);
+
+        break;
+    default:
+        printf("Invalid Choise. \n");
+        break;
+    }
+}
+*/
+
+/*
+⁠Write a menu-driven program using switch case that allows a user to:
+    Check Even or Odd
+    Check Positive, Negative or Zero
+    Find Square and Cube of a Number
+    Exit
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int choice;
+    int num;
+
+    printf("1. Check Even or Odd\n");
+    printf("2. Check Positive, Negative or Zero\n");
+    printf("3. Find Square and Cube of a Number\n");
+    printf("4. Exit\n");
+    printf("Enter your choice: ");
+
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+    case 1:
+        printf("Enter a number to check Even/Odd: ");
+
+        scanf("%d", &num);
+
+        if (num % 2 == 0)
+        {
+            printf("%d is Even.\n", num);
+        }
+        else
+        {
+            printf("%d is Odd.\n", num);
+        }
+        break;
+
+    case 2:
+        printf("Enter a number to check Positive/Negative/Zero: ");
+
+        scanf("%d", &num);
+
+        if (num > 0)
+        {
+            printf("%d is Positive.\n", num);
+        }
+        else if (num < 0)
+        {
+            printf("%d is Negative.\n", num);
+        }
+        else
+        {
+            printf("The number is Zero.\n");
+        }
+        break;
+
+    case 3:
+        printf("Enter a number to find Square and Cube: ");
+
+        scanf("%d", &num);
+
+        printf("Square of %d = %d\n", num, num * num);
+        printf("Cube of %d = %d\n", num, num * num * num);
+        break;
+
+    case 4:
+        printf("Exiting the program.\n");
+        break;
+    default:
+        printf("Invalid choice! Please try again.\n");
+    }
+}
