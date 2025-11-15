@@ -143,6 +143,8 @@ int countDown(int n)
     return 0;
 }*/
 
+
+
 // function pointer. A function pointer is like a normal pointer, but instead of pointing to a variable, it points to a function.
 
 // ex :
@@ -169,7 +171,7 @@ int main()
 }*/
 
 // call back function
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -189,5 +191,34 @@ int main()
     {
         printf("%d ", numbers[i]);
     }
+    return 0;
+}*/
+
+
+
+//fibonacci series
+
+int fibonacci(int n) {
+    if(n <= 0) {
+        return 0;
+    } else if(n == 1) {
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+int main() 
+{
+    int n, i;
+
+    printf("Enter number: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci series: \n");
+    for(i = 0; i < n; i++) {
+        printf("%d\n", fibonacci(i));
+    }
+
     return 0;
 }
