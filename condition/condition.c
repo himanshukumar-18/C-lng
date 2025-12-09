@@ -317,3 +317,44 @@ int main()
     return 0;
 }
 */
+
+
+#include <stdio.h>
+
+int main() 
+{
+    int unit;
+    float charge, bill = 0;
+
+    // input from user.
+    printf("Enter total electric unit: ");
+    scanf("%d", &unit);
+
+    // check
+    if (unit <= 0) 
+    {
+        printf("Unit must be a positive.");
+    } 
+
+    // charge apply.
+    if(unit <= 200) 
+    {
+        charge = 3.25;
+    } 
+    else if(unit > 200 && unit <= 400) 
+    {
+        charge = 4.00;
+    } 
+    else 
+    {
+        charge = 6.00;
+    }
+
+    // calculating bill.
+    bill = unit * charge;
+
+    // print total bill.
+    printf("Total bill: Rs %.2f", bill);
+
+    return 0;
+}

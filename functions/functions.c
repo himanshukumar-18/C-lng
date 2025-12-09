@@ -143,8 +143,6 @@ int countDown(int n)
     return 0;
 }*/
 
-
-
 // function pointer. A function pointer is like a normal pointer, but instead of pointing to a variable, it points to a function.
 
 // ex :
@@ -194,10 +192,9 @@ int main()
     return 0;
 }*/
 
+// fibonacci series
 
-
-//fibonacci series
-
+/*
 int fibonacci(int n) {
     if(n <= 0) {
         return 0;
@@ -208,7 +205,7 @@ int fibonacci(int n) {
     }
 }
 
-int main() 
+int main()
 {
     int n, i;
 
@@ -221,4 +218,43 @@ int main()
     }
 
     return 0;
+}*/
+
+// swap to no.
+int swap(int a, int b)
+{
+    int prev = a;
+
+    printf("\nBefore swaping a = %d, b = %d\n", a, b);
+
+    a = b;
+    b = prev;
+
+    printf("After swaping a = %d, b = %d", a, prev);
+
+    return 0;
+}
+
+// sum of three digit.
+
+int sum(int x, int y, int z)
+{
+    return x + y + z;
+}
+
+//srq.
+int square(int n)
+{
+    return pow(n, 2);
+}
+
+int main()
+{
+    swap(8, 4);
+
+    int sumOfThreeNo = sum(4, 5, 7);
+    printf("\nSum of three digit = %d", sumOfThreeNo);
+
+    int srq = square(5);
+    printf("\nSquare of given no = %d", srq);
 }
