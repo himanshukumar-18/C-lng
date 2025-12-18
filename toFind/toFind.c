@@ -257,9 +257,7 @@
 //     printf("Sum of first %d natural numbers is: %d\n", naturalNum, sum);
 // }
 
-
-
-
+/*
 #include <stdio.h>
 
 int main()
@@ -272,4 +270,148 @@ int main()
     output = (x * x) + (2 * x * y) + (y * y);
 
     printf("Output = %d\n", output);
+}*/
+
+// pratice
+#include <stdio.h>
+#include <string.h>
+
+int SumOfGivenNumber(int n)
+{
+
+    int rem;
+    int sum = 0;
+
+    while (n > 0)
+    {
+        rem = n % 10;
+        sum += rem;
+        n /= 10;
+    }
+
+    return sum;
+}
+
+int ReverseNum(int revNum)
+{
+
+    int rev = 0;
+    int rem;
+
+    while (revNum > 0)
+    {
+        rem = revNum % 10;
+        rev = rev * 10 + rem;
+        revNum /= 10;
+    };
+
+    return rev;
+}
+
+int EvenOdd(int n)
+{
+
+    if (n >= 0)
+    {
+
+        switch (n % 2)
+        {
+        case 0:
+            printf("%d id Even.\n", n);
+            break;
+        case 1:
+            printf("%d is Odd.\n", n);
+            break;
+        default:
+            printf("Invalid Number!!");
+        }
+    }
+    else
+    {
+        printf("Enter positive number");
+    }
+
+    return 0;
+}
+
+int LargestNumInArr()
+{
+
+    int arr[5];
+    int i;
+    int large;
+
+    printf("--Enter Arr Element--\n");
+    for (i = 0; i < 5; i++)
+    {
+        printf("Element[%d]: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    large = arr[0];
+
+    for (i = 0; i < 5; i++)
+    {
+        if (arr[i] > arr[0])
+        {
+            large = arr[i];
+        }
+    }
+
+    printf("Largest element: %d", large);
+
+    return 0;
+}
+
+void ConcatenatedStr()
+{
+
+    char s1[100] = "Himanshu ";
+    char s2[20] = "Kumar";
+
+    printf("First String: %s\n", s1);
+    printf("Secound String: %s\n", s2);
+    strcat(s1, s2);
+    printf("Concatenated String: %s\n", s1);
+}
+
+int Swap(int *a, int *b)
+{
+    int temp = *a;
+    printf("Before Swap: %d, %d\n", *a, *b);
+
+    *a = *b;
+    *b = temp;
+
+    printf("After Swap: %d, %d", *a, *b);
+
+    return 0;
+}
+
+struct Student {
+    char fullName[50];
+    int enroll;
+    char course[10];
+};
+
+int main()
+{
+
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if(n <= 1) {
+        printf("Number should be greater than 1 to check prime.\n");
+    }
+
+    if (n % 2 == 0) {
+        printf("%d is not a prime number.\n", n);
+    } else {
+        printf("%d is a prime number.\n", n);
+    }
+
+
+    return 0;
 }

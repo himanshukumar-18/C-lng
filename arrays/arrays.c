@@ -429,7 +429,7 @@ int main(void)
 
 
 // sum of 0-50 elm.
-
+/*
 int main() 
 {
     int arr[51], i, sum = 0;
@@ -447,6 +447,51 @@ int main()
     }
 
     printf("\nSum: %d", sum);
+
+    return 0;
+}*/
+
+
+
+// 1-D / 2-D array.
+int main() {
+    // 1DArray
+    /*
+    int arr1D[5];
+    int i;
+
+    printf("---1DArray Opration---\n");
+    printf("Enter 5 element for 1DArray.\n");
+
+    for(i = 0; i < 5; i++){
+        printf("Element: %d: ", i + 1);
+        scanf("%d", &arr1D[i]);
+    }
+
+    printf("---Elements of 1DArray---\n");
+    for(i = 0; i < 5; i++) {
+        printf("%d ", arr1D[i]);
+    }*/
+
+    // 2DArray
+    int arr2D[2][3];
+    int i, j;
+
+    printf("--2DArray Oprations--\n");
+    printf("Enter 6 elements for 2DArray (2Row & 3Col): \n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Element[%d][%d]: ", i, j);
+            scanf("%d", &arr2D[i][j]);
+        }
+    }
+
+    printf("--Elements of 2DArray--\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("%d ", arr2D[i][j]);
+        }
+    }
 
     return 0;
 }

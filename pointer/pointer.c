@@ -59,7 +59,7 @@ int main()
     return 0;
 }*/
 
-
+/*
 void add(int a, int b) { printf("Result: %d\n", a + b); }
 void subtract(int a, int b) { printf("Result: %d\n", a - b); }
 void multiply(int a, int b) { printf("Result: %d\n", a * b); }
@@ -81,4 +81,62 @@ int main() {
   }
 
   return 0;
-}
+}*/
+
+
+
+// null pointer
+/*
+int main() {
+    int *ptr = NULL;
+
+    if(ptr == NULL) {
+        printf("The pointer is Null.\n");
+    }
+
+    return 0;
+}*/
+
+// void pointer
+/*
+int main() {
+    int num = 10;
+    float pi = 3.14;
+    void *ptr;
+
+    ptr = &num;
+    printf("Int value %d\n", *(int *)ptr);
+
+    ptr = &pi;
+    printf("Float value %d\n", *(float *)ptr);
+
+    return 0;
+}*/
+
+
+//function pointer
+/*
+void greet() { printf("Hello from the function."); }
+
+int main() {
+    void (*fn)();
+    fn = greet;
+    fn();
+
+    return 0;
+}*/
+
+
+// pointer to pointer
+/*
+int main() {
+    int num = 20;
+    int *ptr = &num;
+    int **ptr2 = &ptr;
+
+    printf("Value of num %d\n", num);
+    printf("Value of ptr %d\n", *ptr);
+    printf("Value of ptr2 %d\n", **ptr2);
+
+    return 0;
+}*/
