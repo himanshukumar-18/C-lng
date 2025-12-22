@@ -394,24 +394,96 @@ struct Student {
     char course[10];
 };
 
+int eletricityBill(int unit) {
+
+    float bill = 0;
+    float charge;
+
+    if( unit <= 200 ) {
+        charge = 3.25;
+    } else if( unit > 200 && unit <= 400 ) {
+        charge = 4.00;
+    } else {
+        charge = 6.00;
+    }
+
+    bill = unit * charge;
+
+    return bill;
+
+}
+
+int CheckEvenOdd(int n) {
+
+    if(n > 0) {
+        if(n % 2 == 0) {
+            printf("Even");
+        } else {
+            printf("Odd");
+        }
+    } else {
+        printf("Enter positive number.");
+    }
+
+    return 0;
+
+}
+
+int checkDay(int day) {
+
+    switch(day) {
+        case 1:
+            printf("Sunday\n");
+            break;
+        case 2:
+            printf("Monday\n");
+            break;
+        case 3:
+            printf("Tuesday\n");
+            break;
+        case 4:
+            printf("Wednesday\n");
+            break;
+        case 5:
+            printf("Thursday\n");
+            break;
+        case 6:
+            printf("Friday\n");
+            break;
+        case 7:
+            printf("Saturday\n");
+            break;
+        default: 
+            printf("Invalid day.");
+    }
+
+    return 0;
+
+}
+
+
+int somOfEvenNumber(int n) {
+
+    int sum = 0;
+    int i;
+
+    for(i = 0; i <= n; i++) {
+        if(i % 2 == 0) {
+            sum += i;
+        }
+    }
+
+    printf("Sum of all even number between 0 to %d = %d", n, sum);
+
+    return 0;
+
+}
+
+
+
 int main()
 {
 
-    int n;
-
-    printf("Enter a number: ");
-    scanf("%d", &n);
-
-    if(n <= 1) {
-        printf("Number should be greater than 1 to check prime.\n");
-    }
-
-    if (n % 2 == 0) {
-        printf("%d is not a prime number.\n", n);
-    } else {
-        printf("%d is a prime number.\n", n);
-    }
-
-
-    return 0;
+   somOfEvenNumber(5); 
+   
 }
